@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#passwordApp {
+  background: #1f2937;
+  height: 100vh;
+}
+
+#main {
+  height: 250px;
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 30px;
+  align-content: center;
+}
+
+.title {
+  line-height: 40px;
+  color: #f9fafb;
+  font-family: Karla;
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.green {
+  color: #10b981;
+}
+.title-sub {
+  line-height: 28px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  color: #d5d4d8;
+}
+
+#generatePass {
+  margin: 30px 0;
+  width: 191px;
+  height: 42px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: #10b981;
+  color: #ffffff;
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+hr {
+  color: #2f3e53;
+}
+
+.output-boxes {
+  display: flex;
+}
+
+.output-box {
+  width: 300px;
+  height: 39px;
+  margin: 30px 10px;
+  border-radius: 6px;
+  background: #273549;
+  color: #10b981;
+  text-align: center;
+  padding: 8px 0;
+}
