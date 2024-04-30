@@ -76,5 +76,14 @@ hr {
   background: #273549;
   color: #10b981;
   text-align: center;
+  letter-spacing: 2px;
   padding: 8px 0;
+}
+
+.length-option {
+  display: flex;
+}
+
+#passChars {
+  width: 100px;
 }

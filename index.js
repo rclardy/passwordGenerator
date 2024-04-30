@@ -95,6 +95,7 @@ const characters = [
 let genPassBtn = document.getElementById('generatePass');
 let outPutB1 = document.getElementById('ob1');
 let outPutB2 = document.getElementById('ob2');
+let passNum = document.getElementById('passChars');
 outPutB1.addEventListener('click', copyText);
 outPutB2.addEventListener('click', copyText);
 let pass1 = '';
@@ -102,11 +103,14 @@ let pass2 = '';
 
 function generatePassword() {
   let password = '';
-  let passwordLength = 15;
-  for (let i = 0; i <= passwordLength; i++) {
-    password += characters[Math.floor(Math.random() * characters.length)];
+  if (passNum.value >= 4 && passNum.value <= 24) {
+    for (let i = 0; i < passNum.value; i++) {
+      password += characters[Math.floor(Math.random() * characters.length)];
+    }
+    return password;
+  } else {
+    alert('length must be 4-24');
   }
-  return password;
 }
 
 function copyText() {
