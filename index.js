@@ -97,9 +97,7 @@ let outPutB1 = document.getElementById('ob1');
 let outPutB2 = document.getElementById('ob2');
 let passNum = document.getElementById('passChars');
 outPutB1.addEventListener('click', copyText);
-outPutB2.addEventListener('click', copyText);
 let pass1 = '';
-let pass2 = '';
 
 function generatePassword() {
   let password = '';
@@ -125,7 +123,5 @@ function copyText() {
 
 genPassBtn.addEventListener('click', () => {
   pass1 = generatePassword();
-  pass2 = generatePassword();
   outPutB1.textContent = pass1;
-  outPutB2.textContent = pass2;
 });
