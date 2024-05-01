@@ -94,20 +94,72 @@ const characters = [
 
 let genPassBtn = document.getElementById('generatePass');
 let outPutB1 = document.getElementById('ob1');
-let passNum = document.getElementById('passChars');
+let length = document.getElementById('passwordLength');
+let includeNumbers = document.getElementById('ifNumbers');
+let includeSpecialChars = document.getElementById('ifSpacialChars');
+let includeUppercase = document.getElementById('ifUppercase');
 outPutB1.addEventListener('click', copyText);
+
 let pass1 = '';
 
 function generatePassword() {
-  let password = '';
-  if (passNum.value >= 4 && passNum.value <= 24) {
-    for (let i = 0; i < passNum.value; i++) {
-      password += characters[Math.floor(Math.random() * characters.length)];
-    }
-    return password;
-  } else {
-    alert('length must be 4-24');
+  let characterSet = characters.slice();
+  if (includeNumbers.checked) {
+    characterSet = characterSet.concat([
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+    ]);
   }
+  if (includeSpecialChars.checked) {
+    characterSet = characterSet.concat([
+      '~',
+      '`',
+      '!',
+      '@',
+      '#',
+      '$',
+      '%',
+      '^',
+      '&',
+      '*',
+      '(',
+      ')',
+      '_',
+      '-',
+      '+',
+      '=',
+      '{',
+      '[',
+      '}',
+      ']',
+      ',',
+      '|',
+      ':',
+      ';',
+      '<',
+      '>',
+      '.',
+      '?',
+      '/',
+    ]);
+  }
+  if (includeUppercase.checked) {
+    characterSet = characterSet.map((char) => char.toUpperCase());
+  }
+  let password = '';
+  for (let i = 0; i < length.value; i++) {
+    const randomIndex = Math.floor(Math.random() * characterSet.length);
+    password += characterSet[randomIndex];
+  }
+  return password;
 }
 
 function copyText() {
@@ -121,6 +173,11 @@ function copyText() {
 }
 
 genPassBtn.addEventListener('click', () => {
-  pass1 = generatePassword();
+  pass1 = generatePassword(
+    length.value,
+    includeNumbers.checked,
+    includeSpecialChars.checked,
+    includeUppercase.checked
+  );
   outPutB1.textContent = pass1;
 });

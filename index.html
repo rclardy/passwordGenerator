@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link
@@ -18,16 +19,28 @@
         </div>
         <button id="generatePass">Generate Password</button>
         <div class="options">
-          <div class="length-option">
-            <!-- <p class="title-sub">number of chars:</p> -->
+          <div class="length-option option-styles">
+            <p class="green">password length:</p>
             <input
               type="range"
-              id="passChars"
+              id="passwordLength"
               min="8"
               max="32"
               oninput="rangeValue.innerText = this.value"
             />
-            <p id="rangeValue"></p>
+            <p id="rangeValue">21</p>
+          </div>
+          <div class="option-styles">
+            <p class="green">special chars?</p>
+            <input type="checkbox" class="switch" id="ifSpacialChars" checked />
+          </div>
+          <div class="option-styles">
+            <p class="green">numbers?</p>
+            <input type="checkbox" class="switch" id="ifNumbers" checked />
+          </div>
+          <div class="option-styles">
+            <p class="green">UPPERCASE?</p>
+            <input type="checkbox" class="switch" id="ifUppercase" checked />
           </div>
         </div>
         <hr />
