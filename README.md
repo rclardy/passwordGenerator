@@ -2,6 +2,9 @@
 
 This is a solo project from the 'Frontend Career Path' provided by Scrimba. There info will be posted below.
 
+Check out the app live:
+https://sage-madeleine-759aa9.netlify.app/
+
 ## About Scrimba
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
