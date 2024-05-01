@@ -21,12 +21,13 @@
           <div class="length-option">
             <!-- <p class="title-sub">number of chars:</p> -->
             <input
-              type="number"
+              type="range"
               id="passChars"
               min="8"
               max="32"
-              placeholder="e.g (8-24)"
+              oninput="rangeValue.innerText = this.value"
             />
+            <p id="rangeValue"></p>
           </div>
         </div>
         <hr />
