@@ -10,9 +10,6 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-}
-
-#passwordApp {
   background: #1f2937;
   height: 100vh;
 }
@@ -20,7 +17,7 @@ body {
 #main {
   height: 250px;
   width: 450px;
-  margin: 0 auto;
+  margin: 10% auto;
   padding-top: 30px;
   align-content: center;
 }
@@ -60,14 +57,6 @@ body {
   text-decoration: none;
 }
 
-hr {
-  color: #2f3e53;
-}
-
-.output-boxes {
-  display: flex;
-}
-
 .output-box {
   width: 300px;
   height: 39px;
@@ -86,10 +75,16 @@ hr {
   align-items: center;
   width: 300px;
   color: #10b981;
+  margin-bottom: 10px;
 }
 
 #passwordLength {
   width: 100px;
+}
+
+.options {
+  border-bottom: 2px solid #10b981;
+  width: 400px;
 }
 
 input[type='checkbox'].switch {
