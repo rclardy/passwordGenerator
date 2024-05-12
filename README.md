@@ -1,6 +1,6 @@
 # passwordGenerator
 
-This is a solo project from the 'Frontend Career Path' provided by Scrimba. There info will be posted below.
+This is a solo project from the 'Frontend Career Path' provided by Scrimba. Their info will be posted below.
 
 Check out the app live:
 https://sage-madeleine-759aa9.netlify.app/
